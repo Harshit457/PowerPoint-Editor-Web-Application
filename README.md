@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PowerPoint Editor Web Application
 
-## Getting Started
+A production-ready, web-based PowerPoint-style presentation editor built with **Next.js 15**, **Fabric.js**, **Redux Toolkit**, and **Tailwind CSS**. This application allows users to create, edit, manage, and save multi-slide presentations with text, shapes, and images — directly in the browser.
 
-First, run the development server:
+## 🚀 Live Demo
+[Live Application Link](https://your-deployed-url.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📌 Features
+
+### 🎨 Slide & Element Management
+- Add, delete, and switch between slides.
+- Add and edit:
+  - Text boxes
+  - Shapes (rectangles, circles, lines)
+  - Images (via URL or local file upload)
+- Move, resize, and style elements on the canvas.
+
+### 💾 Save & Load
+- Save the entire presentation as a `.json` file to your local machine.
+- Load saved `.json` files to restore presentations exactly as they were.
+
+### 🖥️ User Interface
+- **Slide Thumbnails**: Easily navigate between slides.
+- **Canvas Area**: Central editing space powered by Fabric.js.
+- **Toolbar**: Add new elements and customize selected items.
+
+### 📱 Optional Enhancements (if implemented)
+- Undo/Redo functionality.
+- Export individual slides as PNG/JPEG.
+- Mobile-responsive layout.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript (strict mode)
+- **Canvas Library**: Fabric.js
+- **State Management**: Redux Toolkit
+- **Styling**: Tailwind CSS
+- **Persistence**: File System Access API
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── app/                 # Next.js App Router pages and layout
+├── components/          # Reusable UI components (toolbar, slide thumbnails, etc.)
+├── store/               # Redux slices and store configuration
+├── hooks/               # Custom hooks for state access and dispatch
+├── utils/               # Helper functions (file handling, element management)
+└── styles/              # Tailwind CSS configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the Repository**
+```bash
+git clone https://github.com/Harshit457/PowerPoint-Editor-Web-Application.git
+cd powerpoint-editor
+```
 
-## Learn More
+2. **Install Dependencies**
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Run the Development Server**
+```bash
+npm run dev
+```
+The app will be available at **http://localhost:3000**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Build for Production**
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📥 Example JSON File
+An example `.json` file is provided in the `/examples` folder for testing the **Load Presentation** feature.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+This project is open-source and available under the [MIT License](LICENSE).
