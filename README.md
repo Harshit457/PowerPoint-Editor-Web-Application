@@ -3,7 +3,7 @@
 A production-ready, web-based PowerPoint-style presentation editor built with **Next.js 15**, **Fabric.js**, **Redux Toolkit**, and **Tailwind CSS**. This application allows users to create, edit, manage, and save multi-slide presentations with text, shapes, and images — directly in the browser.
 
 ## 🚀 Live Demo
-[Live Application Link]([https://your-deployed-url.com](https://power-point-editor-web-application.vercel.app/)
+[Live Application Link]([[https://your-deployed-url.com](https://power-point-editor-web-application.vercel.app/](https://power-point-editor-web-application.vercel.app/)
 
 ---
 
