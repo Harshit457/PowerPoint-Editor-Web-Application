@@ -63,7 +63,7 @@ src/
 1. **Clone the Repository**
 ```bash
 git clone https://github.com/Harshit457/PowerPoint-Editor-Web-Application.git
-cd powerpoint-editor
+cd PowerPoint-Editor-Web-Application
 ```
 
 2. **Install Dependencies**
