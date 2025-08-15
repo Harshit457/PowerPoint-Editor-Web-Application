@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export interface Slide {
   id: string;
   name: string;
-  canvasData: string;
+  canvasData: any; // Changed from string to any to accept fabric.js canvas objects
   thumbnail?: string;
 }
 
@@ -20,7 +20,7 @@ const initialState: PresentationState = {
     {
       id: 'slide-1',
       name: 'Slide 1',
-      canvasData: '[]',
+      canvasData: { version: '6.7.1', objects: [], background: '#ffffff' }, // Changed from '[]' to proper empty canvas object
     }
   ],
   activeSlideId: 'slide-1',
@@ -37,7 +37,7 @@ const presentationSlice = createSlice({
       const newSlide: Slide = {
         id: `slide-${Date.now()}`,
         name: `Slide ${state.slides.length + 1}`,
-        canvasData: '[]',
+        canvasData: { version: '6.7.1', objects: [], background: '#ffffff' }, // Changed from '[]' to proper empty canvas object
       };
       state.slides.push(newSlide);
       state.activeSlideId = newSlide.id;
@@ -64,10 +64,14 @@ const presentationSlice = createSlice({
     setActiveSlide: (state, action: PayloadAction<string>) => {
       state.activeSlideId = action.payload;
     },
-    updateSlideCanvasData: (state, action: PayloadAction<{ slideId: string; canvasData: string }>) => {
+    updateSlideCanvasData: (state, action: PayloadAction<{ slideId: string; canvasData: any }>) => {
+      // Changed canvasData type from string to any
       const slide = state.slides.find(s => s.id === action.payload.slideId);
       if (slide) {
+        console.log('🔍 Redux reducer - updating canvas data:', action.payload.canvasData);
+        console.log('🔍 Redux reducer - canvas data type:', typeof action.payload.canvasData);
         slide.canvasData = action.payload.canvasData;
+        console.log('🔍 Redux reducer - slide after update:', slide);
       }
     },
     updateSlideThumbnail: (state, action: PayloadAction<{ slideId: string; thumbnail: string }>) => {
