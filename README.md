@@ -84,11 +84,3 @@ npm start
 ```
 
 ---
-
-## 📥 Example JSON File
-An example `.json` file is provided in the `/examples` folder for testing the **Load Presentation** feature.
-
----
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
